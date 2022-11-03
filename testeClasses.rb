@@ -8,9 +8,10 @@ puts ("Variavel carro #{novo_carro}")
 
 a = "RUBY PARA INCIANTES"
 b = a
-
-puts a
+c = a.clone
 
 b.downcase!
+c.upcase!
 
-puts b
+puts a
+puts c

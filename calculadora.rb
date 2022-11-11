@@ -19,13 +19,13 @@ end
 
 resultado = Operacoes.new
 
+opcao = 0
+
 puts("Digite o primeiro valor")
 a = gets
 
 puts("Digite o segundo valor")
 b = gets
-
-opcao = 0
 
 while opcao < 1 or opcao > 4
     system("clear")
@@ -39,7 +39,7 @@ while opcao < 1 or opcao > 4
     opcao = opcao.to_i
 
    if opcao < 1 or opcao > 4 
-        puts("Opção incorreta, pressione qualquer tecla para tentar novamente")
+        puts("Opção incorreta, pressione qualquer tecla para tentar novamente...")
         tecla = gets
    elsif
         case opcao

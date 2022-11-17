@@ -1,4 +1,8 @@
 class Automovel
+    def self.tipo_cambio
+
+    end
+
     def acelera
         puts("Acelera esse carro....")
     end

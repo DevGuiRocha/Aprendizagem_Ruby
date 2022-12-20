@@ -19,7 +19,7 @@ end
 
 resultado = Operacoes.new
 
-opcao = 0
+opcao = 1
 
 puts("Digite o primeiro valor")
 a = gets
@@ -27,21 +27,24 @@ a = gets
 puts("Digite o segundo valor")
 b = gets
 
-while opcao < 1 or opcao > 4
+while opcao != 0
     system("clear")
     puts("Qual operação deseja realizar?")
     puts("1 - Adição")
     puts("2 - Subtração")
     puts("3 - Multiplicação")
-    puts("4 - Divisão") 
+    puts("4 - Divisão")
+    puts("0 - Sair") 
 
     opcao = gets
     opcao = opcao.to_i
-
-   if opcao < 1 or opcao > 4 
+    
+    if opcao == 0
+        puts("Obrigado por utilizar o programa... Até breve!")
+    elsif opcao < 1 or opcao > 4 
         puts("Opção incorreta, pressione qualquer tecla para tentar novamente...")
         tecla = gets
-   elsif
+    elsif
         case opcao
             when 1
                 result = resultado.adicao(a, b)
@@ -52,7 +55,8 @@ while opcao < 1 or opcao > 4
             else
                 result = resultado.divisao(a, b)
         end
-   end
+        
+        puts("O resultado da operação selecioanda é #{result}")
+        tecla = gets
+    end
 end
-
-puts("O resultado da operação selecioanda é #{result}")

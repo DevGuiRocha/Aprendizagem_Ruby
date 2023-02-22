@@ -1,21 +1,5 @@
 
-class Operacoes
-    def adicao(a, b)
-        a.to_i + b.to_i
-    end
-
-    def subtracao(a, b)
-        a.to_i - b.to_i
-    end
-
-    def multiplicacao(a, b)
-        a.to_i * b.to_i
-    end
-
-    def divisao(a, b)
-        a.to_i / b.to_i
-    end
-end
+require_relative 'operacoes.rb'
 
 resultado = Operacoes.new
 
@@ -56,7 +40,7 @@ while opcao != 0
                 result = resultado.divisao(a, b)
         end
         
-        puts("O resultado da operação selecioanda é #{result}")
+        puts("O resultado da operação selecioanda é #{result}... Pressione qualquer tecla para continuar...")
         tecla = gets
     end
 end

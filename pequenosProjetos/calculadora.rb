@@ -19,6 +19,7 @@ while opcao != 0
     puts("3 - Multiplicação")
     puts("4 - Divisão")
     puts("5 - Potência")
+    puts("6 - Fatorial (Valor de A)")
     puts("0 - Sair") 
 
     opcao = gets
@@ -26,7 +27,7 @@ while opcao != 0
     
     if opcao == 0
         puts("Obrigado por utilizar o programa... Até breve!")
-    elsif opcao < 1 or opcao > 5 
+    elsif opcao < 1 or opcao > 6
         puts("Opção incorreta, pressione qualquer tecla para tentar novamente...")
         tecla = gets
     elsif
@@ -39,8 +40,10 @@ while opcao != 0
                 result = resultado.multiplicacao(a, b)
             when 4
                 result = resultado.divisao(a, b)
-            else
+            when 5
                 result = resultado.potencia(a, b)
+            else
+                result = resultado.fatorial(a)
         end
         
         puts("O resultado da operação selecioanda é #{result}... Pressione qualquer tecla para continuar...")
